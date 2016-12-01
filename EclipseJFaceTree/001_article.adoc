@@ -25,6 +25,6 @@ include::065_filebrowser_columns_exercise.adoc[]
 include::../web/advertisement/inBetween02.adoc[]
 include::../10_Include/Eclipse/e4info.adoc[]
 include::../support.adoc[]
-include::008_resourceslocal.adoc[]
+#include::008_resourceslocal.adoc[]
 include::../copyright.adoc[]	
 
