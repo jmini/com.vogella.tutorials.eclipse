@@ -165,9 +165,9 @@ The bundle symbolic name is `org.eclipse.e4.ui.workbench`.
 You can check the current setting in your _plugin.xml_ file on the _Extensions_ tab and in the details of the _org.eclipse.core.runtime.products_ extension.
 
 |" Unresolved requirement: Require-Capability: osgi.extender; filter:='(&(osgi.extender=osgi.component)(version>=1.2)(!(version>=2.0)))' " message during start up or validation.
-|Ensure that `org.eclipse.equinox.ds` is added as a dependency in your product. Remember to press `Add Required Plug-ins` after adding a new dependency.
+|Add `org.eclipse.equinox.ds` and its dependencies to the product. Ensure you check the consistency of your product with the Validate button.
 
 |"Event Admin service is not available, unable to publish event org.osgi.service.event.Event" message during start up.
-|Ensure that `org.eclipse.equinox.event` is added as a dependency in your product. Remember to press `Add Required Plug-ins` after adding a new dependency.
+|Add `org.eclipse.equinox.event` and its dependencies to the product. Ensure you check the consistency of your product with the Validate button.
 |===
 
