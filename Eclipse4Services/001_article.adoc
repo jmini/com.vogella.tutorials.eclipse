@@ -10,7 +10,7 @@ Version 0.3, 06.07.2016
 :vgwort: Eclipse4Services
 
 [abstract]
-=== Eclipse e4
+== Eclipse e4
 This tutorial gives an overview of the available services of the Eclipse platform.
 These service are used to developing Eclipse RCP applications and Eclipse plug-ins.
 
