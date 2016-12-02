@@ -1,4 +1,4 @@
-= SWT Custom Widgets - Tutorial
+= Developing custom widgets with SWT - Tutorial
 :linkcss:
 :sectnums:
 :experimental:
@@ -10,7 +10,7 @@ Version 0.3, 15.08.2016
 :vgwort: SWTCustomWidget
 
 [abstract]
-This tutorial describes how to use and implement custom SWT widgets.
+This tutorial describes how to implement and use custom SWT widgets.
 				
 include::../web/advertisement/afterTableOfContent.adoc[]
 include::010_overview.adoc[]
