@@ -1,0 +1,13 @@
+== SWT custom drawing
+
+The  'org.eclipse.swt.graphics.GC' class is a graphics context (GC) which encapsulates the drawing operations.
+The SWT drawing API including for example how to draw lines and shapes, draw text and images and fill shapes. 
+Graphics can be drawn on anything that implements 'org.eclipse.swt.graphics.Drawable'.
+This includes 'org.eclipse.swt.widgets.Control' and 'org.eclipse.swt.graphics.Image'. 
+
+There are two ways to use a GC:
+
+* Create one using the constructor which expects a `Drawable` instance
+* Register a paint listener on a control and use the gc return in the paintEvent callback
+
+
