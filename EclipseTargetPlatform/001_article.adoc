@@ -17,7 +17,6 @@ This tutorial describes how to setup your target platform for Eclipse Plug-in an
 include::../web/kindle/eclipse-rcp.adoc[]
 include::../web/advertisement/afterTableOfContent.adoc[]
 include::010_overview.adoc[]
-include::012_definition.adoc[]
 include::../web/advertisement/inBetween01.adoc[]
 include::020_tutorial_setup.adoc[]
 include::../10_Include/Eclipse/e4info.adoc[]

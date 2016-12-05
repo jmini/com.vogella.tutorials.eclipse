@@ -1,43 +1,57 @@
-== Target platform for defining available plug-ins for development
+== Target platform
 
-The set of plug-ins
-which you can use for your development or your
-build process to resolve the project dependencies is
-defined
-by the
-plug-ins in your
-workspace in addition with the plug-ins
-defined by
-your
-_target platform_.
-For example your plug-ins use classes from the SWT and JFace
-plug-ins.
-By default the plug-in installed in
-your
-Eclipse
-IDE installation
-are used as target
-platform.
+=== Target platform for defining available plug-ins for development
 
-A target definition file is typically shared between the developers to ensure that
-everyone is using the same
-basis for development.
+The set of plug-ins available for your application development is defined by the plug-ins in your workspace in addition to the plug-ins defined by your _target platform_.
+For example, the SWT and JFace plug-ins are typically provided by your target platform.
+By default, the plug-in installed in your Eclipse IDE installation are used as target platform.
 
-It is good practice to develop and build against a specific
-target definition. This way it can be ensured that
-dependencies and
-their
-versions doesn’t change during the development. Via an explicit
-target definition it can also be
-ensured that
-all
-developers in a team
-are
-using the same dependencies and versions,
-rather than being
-dependent
-on the
-versions installed in the IDE of
-every developer.
 
+It is good practice to develop and build against a explicit target definition which is stored in a configuration file.
+This way the plug-in dependencies and the used versions are controlled and specified during the development. 
+A target definition file is typically shared between the developers to ensure that everyone is using the same basis for development.
+If such a target definition file does not exists, than every developer develops against his version of the Eclipse IDE, which can lead to incompatible changes.
+
+=== Defining a target platform
+
+You can specify your target platform with a _target definition file_. 
+With such a file you define the available plug-ins and features.
+
+TIP: A target platform can be defined based on software sites (p2 update sites) or other means. 
+As build systems like Maven Tycho support only p2 update sites, it is recommended to use only these.
+	
+A target definition file can be created via menu:File[New > Other... > Plug-in Development > Target Definition].
+	
+image::targetdefinition10.png[Define File name for Target Definition]
+
+You can add new locations via the btn:[Add...] button in the Locations section. 
+To add an Eclipse p2 update site, select _Software Site_ and specify the URL.
+	
+Once you have a target definition file, you can set it as the target platform in your Eclipse IDE.
+This can be done via the _Set as Target Platform_ link in the Target definition editor as depicted in the following screenshot.
+	
+image::targetdefinition20.png[Setting the new defined target definition as target for the development]
+
+TIP: Wait until the target platform is completely resolved before setting it as target platform.
+	
+All plug-ins you are planning to use in your application and test code must be included in the target definition. 
+For example, if you want to  use SWTBot for unit tests, add _SWTBot for SWT Testing_ features from http://download.eclipse.org/technology/swtbot/releases/latest/ to your target platform.
+	
+image::tutorial_targetdefinition50.png[Definition of a target definition file]
+
+You can switch the target platform in the Eclipse Preferences.
+Select menu:Window[Preferences > Plug-in Development > Target Platform].
+	
+	
+image::targetdefinition30.png[Setting the target definition via the Eclipse Preferences]
+	
+A preferred way of defining your target platform is to use (p2) update sites. 
+These are of the same type as the update sites that you used to install a new set of plug-ins. 
+If the content in the update sites defined by your target platform changes, your local set of plug-ins can be updated.
+
+[NOTE]
+====
+It is also possible to define your target platform based on plug-ins in your file system.
+But this is not recommended as popular build systems like Maven/Tycho do not support file based target definition files.
+====
 
