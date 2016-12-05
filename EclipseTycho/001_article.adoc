@@ -1,4 +1,4 @@
-== Eclipse Tycho for building Eclipse Plug-ins, OSGi bundles and RCP applications - Tutorial
+= Eclipse Tycho for building Eclipse Plug-ins, OSGi bundles and RCP applications - Tutorial
 :linkcss:
 :sectnums:
 :experimental:
