@@ -4,5 +4,3 @@ http://www.eclipse.org/swtbot[SWTBot homepage]
 		
 http://wiki.eclipse.org/SWTBot/FAQ[SWTBot FAQ]
 	
-// include::../10_Include/resources.adoc[]
-
