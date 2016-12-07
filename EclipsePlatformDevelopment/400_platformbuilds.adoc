@@ -78,3 +78,62 @@ These packages can be found in the Git repository in the eclipse.platform.releng
 
 
 
+=== Additional infos about building the Eclipse platform
+
+
+==== Eclipse platform Hudson builds
+
+The Eclipse platform builds at Hudson. 
+See https://hudson.eclipse.org/releng/[Releng builds] and https://hudson.eclipse.org/platform/[Platform builds].
+This releng build instance is used for the Eclipse SDK build, and the platform instance to validate Gerrit contributions.
+
+
+
+==== Changing build ID
+
+A normal CBI Build shows, "Build id: @build@" in the "About Eclipse SDK" window. 
+To define a custom build id use the `buildId` parameter and the `update-branding-plugins` profile.
+
+
+[source,console]
+----
+include::res/extras/buildid.txt[]
+----
+
+[TIP]
+====
+To check which properties can be overridden check the properties fields in the eclipse-platform-parent/pom.xml file.
+====
+
+==== Build single parts of the aggregator
+
+It is also possible to build just single parts of the aggregator repository, by passing the `build-individual-bundles` profile.
+The following example shows how to build just the rt.equinox.framework.
+
+[source,console]
+----
+include::res/extras/build-individual-bundles.txt[]
+----
+
+
+[NOTE]
+====
+Unfortunately while there are numerous bundles for which the build succeed with this method, there are a couple bundles / features that cannot be built using this method.
+====
+
+
+
+==== Building natives (SWT binary files)
+
+The CBI build does not build natives by default (SWT binary files).
+Instead, the CBI build simply copies pre-built native files from the swt.binaries repository.
+
+
+For Windows/Mac/Linux it is possible to force the CBI build to build these natives by passing the -Dnative pointing to the build.
+For example the _-Dnative=gtk.linux.x86_64_ parameter in the case of Linux. 
+List of options available at https://wiki.eclipse.org/Platform-releng/Platform_Build#Building_natives[Building natives].
+
+
+The Fedora project has removed some non Eclipse IDE related plug-ins to speed up the build process. 
+See the http://pkgs.fedoraproject.org/cgit/eclipse.git/tree/eclipse.spec#n366[Fedora build script].
+
