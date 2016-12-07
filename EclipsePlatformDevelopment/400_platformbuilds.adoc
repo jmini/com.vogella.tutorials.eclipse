@@ -2,38 +2,21 @@
 
 
 === Building the Eclipse IDE
+
 (((Eclipse IDE build)))
 Eclipse uses a Maven based build system for automated builds using the Maven Tycho plug-in. 
 Using this build system, you can create your custom build of the Eclipse IDE. 
-If you building the Eclipse IDE from the current master branch you get an IDE based on the latest developments of the Eclipse development team.
+This approach allows you to add and tests patches based on the latest developments of the Eclipse team.
+The results of the build are archive files for the different platforms, which include everything to run an Eclipse IDE.
 
-The results of an Tycho build are archive files for the different platforms, which include everything to run an Eclipse IDE.
-
-A good place to post questions about the CBI build is the https://dev.eclipse.org/mailman/listinfo/cbi-dev[CBI mailing list].
-
-
+The build procedure might change over time.
+See https://wiki.eclipse.org/Platform-releng/Platform_Build[Platform build wiki] for additional information.
 
 === Requirements
-
-As the build continuously changes, the results and requirement of the build might be slightly changed at the time you read this. 
-See <<buildeclipse_additions_questions>> for finding additional information.
-
-
-Depending on your network connection and your machine power the build of the Eclipse IDE takes around 2 hours on
-a Core i5 machine with
-SSD, so of course time is required for this.
-Also, approximately 25
-Gigs
-of free space and 4 Gigs
-of RAM are required on the
-hardware-side.
-Building of an Eclipse IDE
-is possible on Windows, OS X
-and Linux
-based
-distributions. 
-This tutorial is tested with Linux.
-
+The build of the Eclipse IDE takes around 2 hours on a Core i5 machine with SSD.
+Approximately 25 GB of free space and 4 GB of RAM are required on the hardware-side.
+Building of an Eclipse IDE is possible on Windows, OS X and Linux based distributions. 
+The following description is based on  Linux.
 
 On the software-side the following software is required:
 
@@ -42,17 +25,45 @@ On the software-side the following software is required:
 * Oracle 1.8 JDK or higher
 
 
-=== Building the Eclipse IDE from source
+=== Build instructions
 
-You download the newest version of the source code by cloning the following repository and it's submodules via Git.
-Afterwards you can start a build.
+Perform the following instructions to build the Eclipse IDE.
 
 [source,console]
 ----
 git clone -b master 
    --recursive git://git.eclipse.org/gitroot/platform/eclipse.platform.releng.aggregator.git
-mvn clean verify
+mvn clean verify -fae
 ----
+
+Alternatively, to the aggregated comment for cloning, you can also split the commands:
+
+[source,console]
+----
+git clone git://git.eclipse.org/gitroot/platform/eclipse.platform.releng.aggregator.git
+git submodule init
+git checkout master
+git pull --recurse-submodules
+git submodule update
+mvn clean verify -fae
+----
+
+At the moment the build process generates "dirt", e.g., it generates files which influence the next build.
+To ensure that the repository is reseted to a clean state, you can use the following commands.
+
+[source,console]
+----
+git submodule foreach git clean -f -d -x
+git submodule foreach git reset --hard HEAD
+git clean -f -d -x
+git reset --hard HEAD
+----
+
+
+[TIP]
+====
+To skip the tests use `mvn clean verify -DskipTests=true -fae`
+====
 
 If you receive `java.lang.OutOfMemoryError` error during the Maven build, you should increase the memory which is available for the build.
 
@@ -66,17 +77,4 @@ If the build is successful, the Eclipse SDK is packaged as archive files for all
 These packages can be found in the Git repository in the eclipse.platform.releng.tychoeclipsebuilder/sdk/target/products/* folder:
 
 
-=== Cleanup before the next build
-
-To ensure that the repository is clean and up to date we execute the following Git commands.
-
-[source,console]
-----
-git submodule foreach git clean -f -d -x
-git submodule foreach git reset --hard HEAD
-git clean -f -d -x
-git reset --hard HEAD
-----
-
-	
 
