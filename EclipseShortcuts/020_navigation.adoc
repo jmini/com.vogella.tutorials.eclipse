@@ -5,16 +5,16 @@
 |===
 |Shortcut |Description
 
-a|kbd:[Ctrl + Shift + R]
+|kbd:[Ctrl + Shift + R]
 |Search dialog for resources, e.g., text files
 
-a|kbd:[Ctrl + Shift + T]
+|kbd:[Ctrl + Shift + T]
 |Search dialog for Java Types
 
-a|kbd:[Ctrl + E]
+|kbd:[Ctrl + E]
 |Search dialog to select an editor from the currently open editors
 
-a|kbd:[Ctrl + F8]
+|kbd:[Ctrl + F8]
 |Shortcut for switching perspectives
 
 |===
@@ -25,19 +25,19 @@ a|kbd:[Ctrl + F8]
 |===
 |Shortcut |Description
 
-a|kbd:[Alt + &#8592;]
+|kbd:[Alt + &#8592;]
 |Go to previous opened editor. Cursor is placed where it was before you opened the next editor
 
-a|kbd:[Alt + &#8594;]
+|kbd:[Alt + &#8594;]
 |Similar Alt + &#8592; but opens the next editor
 
-a|kbd:[Ctrl+Q]
+|kbd:[Ctrl+Q]
 |Go to editor and the position in this editor where the last edit was done
 
-a|kbd:[Ctrl + PageUp] 
+|kbd:[Ctrl + PageUp] 
 |Switch to previous opened editor
 
-a|kbd:[Ctrl + PageDown] 
+|kbd:[Ctrl + PageDown] 
 |Switch to next opened editor
 
 |===

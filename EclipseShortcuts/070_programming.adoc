@@ -5,13 +5,13 @@
 |===
 |Shortcut |Description
 					
-a|kbd:[Shift + F2]
+|kbd:[Shift + F2]
 | Show the Javadoc for the selected type / class / method
 					
-a|kbd:[Alt+Shift + N]
+|kbd:[Alt+Shift + N]
 |Shortcut for the menu to create new objects						
 					
-a|kbd:[Alt + Shift + Z]
+|kbd:[Alt + Shift + Z]
 |Surround block with try and catch
 			
 |===

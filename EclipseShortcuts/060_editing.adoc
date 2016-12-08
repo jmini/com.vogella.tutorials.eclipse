@@ -22,31 +22,31 @@
 |kbd:[Ctrl + Space]
 |Content assist/ code completion
 
-a|kbd:[Ctrl + T]
+|kbd:[Ctrl + T]
 |Show the inheritance tree of the current Java class or method.
 
-a|kbd:[Ctrl + O]
+|kbd:[Ctrl + O]
 |Show all methods of the current class, press Ctrl + O again to show the inherited methods.
 
-a|kbd:[Ctrl + M]
+|kbd:[Ctrl + M]
 |Maximize active editor or view
 
-a|kbd:[Ctrl + Shift + F]
+|kbd:[Ctrl + Shift + F]
 |Format source code
 
-a|kbd:[Ctrl + I]
+|kbd:[Ctrl + I]
 |Correct indentation, e.g.,  format tabs/whitespaces in code 
 
-a|kbd:[Ctrl + F]
+|kbd:[Ctrl + F]
 |Opens the find dialog  
 
-a|kbd:[Shift + Enter]
+|kbd:[Shift + Enter]
 |Adds a link break at the end of the line
 
-a|kbd:[Ctrl + Shift + O]
+|kbd:[Ctrl + Shift + O]
 |Organize the imports; adds missing import statements and removes unused ones
 
-a|kbd:[Alt+Shift+Z] 
+|kbd:[Alt+Shift+Z] 
 | Wrap the select block of code into a block, e.g. try/catch.
 
 |===
@@ -56,22 +56,22 @@ a|kbd:[Alt+Shift+Z]
 |===
 |Shortcut |Description
 
-a|kbd:[Ctrl + &#8592;] or kbd:[Ctrl + &#8594;]
+|kbd:[Ctrl + &#8592;] or kbd:[Ctrl + &#8594;]
 |Move one text element in the editor to the left or right
 
-a|kbd:[Ctrl + &#8593;] or kbd:[Ctrl + &#8595;]
+|kbd:[Ctrl + &#8593;] or kbd:[Ctrl + &#8595;]
 |Scroll up / down a line in the editor
 
-a|kbd:[Ctrl + Shift + P]
+|kbd:[Ctrl + Shift + P]
 |Go to the matching bracket
 
-a|kbd:[Shift + Cursor movement]
+|kbd:[Shift + Cursor movement]
 |Select text from the starting position of the cursor
 
-a|kbd:[Alt + Shift &#8593; / &#8595;]
+|kbd:[Alt + Shift &#8593; / &#8595;]
 |Select the previous / next syntactical element
 
-a|kbd:[Alt + Shift  &#8593; / &#8595; / &#8592; / &#8594;]
+|kbd:[Alt + Shift  &#8593; / &#8595; / &#8592; / &#8594;]
 |Extending / reducing the selection of the previous / next syntactical element
 
 |===
@@ -81,16 +81,16 @@ a|kbd:[Alt + Shift  &#8593; / &#8595; / &#8592; / &#8594;]
 |===
 |Shortcut |Description
 
-a|kbd:[Ctrl + Alt + &#8595;] 
+|kbd:[Ctrl + Alt + &#8595;] 
 |Copy current line below the line in which the cursor is placed
 
-a|kbd:[Ctrl + Alt + &#8593;]
+|kbd:[Ctrl + Alt + &#8593;]
 |Copy current line above the line in which the cursor is placed
 
-a|kbd:[Alt + Up]  
+|kbd:[Alt + Up]  
 |Move line one line up
 
-a|kbd:[Alt + Down] 
+|kbd:[Alt + Down] 
 |Move line one line down
 
 |===
@@ -100,16 +100,16 @@ a|kbd:[Alt + Down]
 |===
 |Shortcut |Description
 
-a|kbd:[Ctrl + D]
+|kbd:[Ctrl + D]
 |Deletes line
 
-a|kbd:[Ctrl + Shift + DEL]
+|kbd:[Ctrl + Shift + DEL]
 |Delete until end of line
 
-a|kbd:[Ctrl + DEL]
+|kbd:[Ctrl + DEL]
 |Delete next element
 
-a|kbd:[Ctrl + BACKSPACE]
+|kbd:[Ctrl + BACKSPACE]
 |Delete previous element
 
 |===
@@ -119,11 +119,11 @@ a|kbd:[Ctrl + BACKSPACE]
 |===
 |Shortcut |Description
 
-a|kbd:[Shift + Enter] 
+|kbd:[Shift + Enter] 
 |Adds a blank line below the current line and moves the cursor to the new line. 
 The difference between a regular enter is that the currently line is unchanged, independently of the position of the cursor.
 
-a|kbd:[Ctrl+Shift+Enter] 
+|kbd:[Ctrl+Shift+Enter] 
 |Same as Shift + Enter but above
 
 |===
@@ -133,10 +133,10 @@ a|kbd:[Ctrl+Shift+Enter]
 |===
 |Shortcut |Description
 
-a|kbd:[Ctrl + 2, L]
+|kbd:[Ctrl + 2, L]
 |Assign statement to new local variable
 
-a|kbd:[Ctrl + 2, F]
+|kbd:[Ctrl + 2, F]
 |Assign statement to new field 
 
 |===

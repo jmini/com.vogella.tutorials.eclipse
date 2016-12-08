@@ -5,13 +5,13 @@
 |===
 |Shortcut |Description
 					
-a|kbd:[Alt + Shift + R]
+|kbd:[Alt + Shift + R]
 |Rename
 					
-a|kbd:[Ctrl + 2, R]
+|kbd:[Ctrl + 2, R]
 |Rename locally (in file), faster than Alt + Shift + R
 					
-a|kbd:[Alt + Shift + T]
+|kbd:[Alt + Shift + T]
 |Opens the context-sensitive refactoring menu, e.g., displays
 			
 |===

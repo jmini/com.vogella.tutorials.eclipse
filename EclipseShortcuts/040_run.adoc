@@ -5,11 +5,11 @@
 |===
 |Shortcut |Description
 					
-a|kbd:[Ctrl + F11]
+|kbd:[Ctrl + F11]
 |Run last launched
 					
 					
-a|kbd:[Alt + Shift + X, J]
+|kbd:[Alt + Shift + X, J]
 |Run current selected class as Java application
 
 |===
