@@ -33,6 +33,7 @@ For example you could hide the minimize and maximize button of a _MPartStack_ vi
 include::res/css/hideminimize.txt[]
 ----
 
+=== CSS pseudo classes in Eclipse
 
 Eclipse also supports _CSS pseudo classes_ but these are disabled by default. 
 See https://bugs.eclipse.org/bugs/show_bug.cgi?id=362532 for details.
