@@ -39,11 +39,11 @@ After the installation you can select the entry from the context menu of a proje
 		
 image::copyrightheadertool20.png[Using the fix copyright header tool]
 		
-=== Debugging GTK elements with GtkInspector under ubuntu
+=== Debugging GTK elements with GtkInspector
 
 `GtkInspector` is a tool that allows you to debug GTK+ applications.
 It was introduced in GTK+ 3.14.
-To start Eclipse with the GtkInspector start it with an envinronment variable set.
+To start Eclipse with the GtkInspector start it with an environment variable set.
 
 [source, terminal]
 ----
@@ -51,8 +51,8 @@ GTK_DEBUG=interactive ./eclipse
 ----
 
 You can also start the GtkInspector for an already running program.
-To do this you have to enable the inspector keybindings.
-To get the debugging schema for your config you might have to install an additional package.
+To do this you have to enable the inspector key bindings.
+Under ubuntu you might have to install an additional package to make this option available.
 
 [source, terminal]
 ----
