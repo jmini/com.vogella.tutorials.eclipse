@@ -1,0 +1,37 @@
+== Using extension points to define JDT templates
+
+You can also define your templates within an Eclipse plug-in.
+
+This makes it easier to distribute your templates to other developers.
+	
+	
+Providing a template can be done via an extension to the `org.eclipse.ui.editors.templates` extension point.
+	
+The templates are activated for a certain scope. 
+For example, you have templates for statements within a method or templates for new methods.
+
+
+.Context in the template
+[cols="1,3",options="header"]
+|===
+| Statement | Description
+| java-statements
+| Templates which are available within a method
+| java-members
+| Allows to define templates for members, e.g., new methods
+|===
+
+To provide a code templates based on this extension point, create a new plug-in called `com.vogella.jdt.templates`.
+	
+	
+Add an extension for the `org.eclipse.ui.editors.templates` extension point and add an `include`as in the following screenshot.
+	
+image::/jdttemplates10.png[]
+	
+
+In the reference file you can add your templates following a predefined schema. 
+The file can look like the following, the structure should be easily to adjust for other use cases.
+
+[source, language]
+----
+include::examples/additional-templates.xml[]
