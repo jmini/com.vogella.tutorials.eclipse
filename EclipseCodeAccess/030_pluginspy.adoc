@@ -23,3 +23,16 @@ _SWT Spy_ for Eclipse is a tool that prints out information about the widget und
 Currently, this includes style, layout and parent information.
 See http://www.eclipse.org/swt/tools.php[SWT Development Tools homepage] for more information.
 
+=== Layout Spy
+
+With Eclipse 4.7 PDE has added the SWT Layout Spy.
+Press kbd:[Ctrl + Alt + Shift + F9] on any window to activate it.
+
+Press `Select Control` to pick a control to inspect.
+With `Show Overlay` you activate an overlay that shows an outline around the selected control (red rectangle) and its child (yellow rectangle).
+You can navigate the controls with `Open Child` and `Open Parent`.
+
+To find a control which boundary is misaligned now navigate to a control thats outline is correct but its child isn't.
+Check the value of computeSize. If the result of computeSize is correct, the problem is in the parent layout or its attributes. Otherwise the problem is in the child widget.
+
+image::pluginspy30.png[]
