@@ -9,7 +9,7 @@ We will offer the option to create a HTML page from a Java source file.
 
 To contribute to an existing menu or toolbar, you need to know the corresponding ID.
 This ID can be found via the _Menu Spy_.
-To start the Menu Spy use ALT + Shift + F2 and click on the menu entry you are interested in.
+To start the Menu Spy use kbd:[ALT + Shift + F2] and click on the menu entry you are interested in.
 
 
 === Contribute to the Package Explorer

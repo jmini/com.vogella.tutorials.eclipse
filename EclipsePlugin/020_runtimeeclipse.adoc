@@ -1,3 +1,4 @@
+[[runtimeeclipse_starting]]
 == Starting an Eclipse instance (Runtime Eclipse)
 
 === Starting the Eclipse IDE from Eclipse

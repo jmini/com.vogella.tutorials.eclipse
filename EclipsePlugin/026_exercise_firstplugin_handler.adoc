@@ -1,3 +1,4 @@
+[[firstplugin_migratione4_toolbar]]
 == Exercise: Add a e4 menu and toolbar to the Eclipse IDE
 
 In this exercise you create a plug-in which contributes an e4 menu entry to a 3.x based application menu.
