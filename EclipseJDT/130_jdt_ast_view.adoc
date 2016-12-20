@@ -1,6 +1,6 @@
 == JDT AST View
 
-The JDT project provides an Eclipse plugin called `AST View`.
+The JDT project provides an Eclipse plugin called _AST View_.
 AST View can visualize the AST of a Java source file.
 
 === Installing AST View
