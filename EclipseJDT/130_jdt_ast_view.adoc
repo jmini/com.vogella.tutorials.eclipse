@@ -1,0 +1,22 @@
+== JDT AST View
+
+The JDT project provides an Eclipse plugin called `AST View`.
+AST View can visualize the AST of a Java source file.
+
+=== Installing AST View
+
+You can install the plug-in from their update page:
+http://www.eclipse.org/jdt/ui/update-site
+
+If you prefer to install manually you can find the latest binaries on the project page:
+https://www.eclipse.org/jdt/ui/astview/
+
+=== Using AST View
+
+You can start the plugin with the keybind kbd:[Alt+Shift+Q], kbd:[A]
+or via the menu entry at menu:Window[Show View > Other..., Java > AST View].
+
+Now open the Java file that you want to analyze.
+Press btn:[Show AST of active editor] to load the AST.
+By double clicking on a specific entry you jump to the correlating line in the source code.
+
