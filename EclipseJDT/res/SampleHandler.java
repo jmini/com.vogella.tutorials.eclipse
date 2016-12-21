@@ -19,7 +19,7 @@ import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.jface.text.Document;
 
-public class SampleHandler extends AbstractHandler {
+public class SampleHandler  {
 
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		// Get the root of the workspace

@@ -10,7 +10,8 @@ Version 1.8, 23.06.2016
 :vgwort: EclipseJDT
 
 [abstract]
-This tutorial describes how the Eclipse JDT (Java Development Tools) and the Eclipse AST (Abstract Syntax Tree) can be used to access, change and read the elements of a Java program.
+This tutorial describes the usage of the the Abstract Syntax Tree (AST) and the Java model in Eclipse.
+This AST allows to access, change and read the elements of a Java program.
 
 include::../web/advertisement/afterTableOfContent.adoc[]
 include::010_overview.adoc[]

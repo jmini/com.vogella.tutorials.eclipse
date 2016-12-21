@@ -1,12 +1,7 @@
-== Eclipse JDT
-
-=== Overview
+== The Java model and the Java Abstract Syntax Tree
 
 The Eclipse _Java Development Tools_ (JDT) project provides the tools to develop Java applications.
 This project also provides APIs to access and manipulate Java source code.
-
-It allows to access the existing projects in the workspace, create new projects and modify and read existing projects.
-It also allows to launch Java programs.
 
 JDT provides access to the Java source code via two different means.
 The _Java Model_ and the _Abstract Syntax Tree (AST)_ which is a works on a _Document Object Model_ similar to the XML DOM.
