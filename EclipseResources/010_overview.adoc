@@ -12,3 +12,4 @@ The following example access all projects in your workspace, finds all associate
 include::res/SampleHandler.java[]
 ----
 
+

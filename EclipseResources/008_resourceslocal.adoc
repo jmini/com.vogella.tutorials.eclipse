@@ -1,4 +1,5 @@
 == Additional information Eclipse Resources API 
 
-Not yet listed
+https://www.eclipse.org/articles/article.php?file=Article-Unleashing-the-Power-of-Refactoring/index.html
 
+https://www.eclipse.org/articles/Article-LTK/ltk.html
