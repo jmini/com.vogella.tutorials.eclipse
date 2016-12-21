@@ -1,4 +1,5 @@
-== Example: tracing for key bindings
+== Example: 
+ for key bindings
 
 The tracing functionality of Eclipse allows to you trace which command is associated with a certain key binding. The following listing contains the trace options to enable that.
 

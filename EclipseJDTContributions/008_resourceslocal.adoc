@@ -1,4 +1,0 @@
-== Eclipse JDT Contributions Resources
-
-Nothing listed.
-

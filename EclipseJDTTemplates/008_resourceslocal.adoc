@@ -1,3 +1,0 @@
-== JDT template resources
-
-Not yet listed.

@@ -34,4 +34,4 @@ The file can look like the following, the structure should be easily to adjust f
 
 [source, language]
 ----
-include::examples/additional-templates.xml[]
+include::res/templates/additional-templates.xml[]

@@ -39,7 +39,7 @@ The following `IQuickAssistProcessor` can be used to show an `IJavaCompletionPro
 
 [source, java]
 ----
-include::res/QuickAssistProcessor1.java[]
+include::res/quickfix/QuickAssistProcessor1.java[]
 ----
 
 === Validate

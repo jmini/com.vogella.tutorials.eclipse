@@ -48,7 +48,7 @@ Therefore an empty implementation of an `IQuickFixProcessor` can be used to find
 
 [source, java]
 ----
-include::res/ProblemIdQuickFixProcessor.java[]
+include::res/quickfix/ProblemIdQuickFixProcessor.java[]
 ----
 
 With the `IQuickFixProcessor` from above the Eclipse IDE can be started from the Eclipse IDE itself and a certain problem can be reconstructed, e.g., in a Java editor.
