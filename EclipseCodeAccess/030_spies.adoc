@@ -36,3 +36,44 @@ To find a control which boundary is misaligned now navigate to a control thats o
 Check the value of computeSize. If the result of computeSize is correct, the problem is in the parent layout or its attributes. Otherwise the problem is in the child widget.
 
 image::pluginspy30.png[]
+
+
+		
+=== Debugging GTK elements with GtkInspector
+
+`GtkInspector` is a tool that allows you to debug GTK+ applications.
+It was introduced in GTK+ 3.14.
+To start Eclipse with the GtkInspector start it with an environment variable set.
+
+[source, terminal]
+----
+GTK_DEBUG=interactive ./eclipse
+----
+
+You can also start the GtkInspector for an already running program.
+To do this you have to enable the inspector key bindings.
+Under ubuntu you might have to install an additional package to make this option available.
+
+[source, terminal]
+----
+sudo apt-get install libgtk-3-dev
+----
+
+Run this command in your terminal to activate the setting.
+
+[source, terminal]
+----
+gsettings set org.gtk.Settings.Debug enable-inspector-keybinding true
+----
+
+After this the keybinding are activated.
+
+|===
+|Shortcut |Purpose
+
+|kbd:[Ctrl+Shift+D]
+|Start GtkInspector
+
+|kbd:[Ctrl+Shift+I]
+|Start GtkInspector
+|===

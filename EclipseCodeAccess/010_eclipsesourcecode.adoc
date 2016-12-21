@@ -1,5 +1,4 @@
 == Accessing the Eclipse source code
 
-If you develop custom Eclipse plug-ins or Eclipse RCP applications, looking at the Eclipse source code is useful.
-This description helps you to access this source code.
+This description helps you to access the underlying structure and source code of an Eclipse application.
 
