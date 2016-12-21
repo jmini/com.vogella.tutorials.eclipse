@@ -2,4 +2,14 @@
 
 See MenuHelper
 
-See also the org.eclipse.e4.ui.menu.tests test suite
+=== The org.eclipse.e4.ui.tests plug-in
+
+The overall test suite for running the plug-ins' tests is org.eclipse.e4.ui.tests.UIAllTests.
+
+[source, java]
+----
+include::res/test/UIAllTests.java[]
+----
+
+<1> The InjectionEventTest always has to be run first (https://bugs.eclipse.org/bugs/show_bug.cgi?id=422676)
+
