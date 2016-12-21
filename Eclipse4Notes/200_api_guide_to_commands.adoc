@@ -13,3 +13,6 @@ include::res/test/UIAllTests.java[]
 
 <1> The InjectionEventTest always has to be run first (https://bugs.eclipse.org/bugs/show_bug.cgi?id=422676)
 
+=== ContributionsAnalyzer
+
+The `ContributionsAnalyzer` class is a class with lots of static method to analyse things like the visibility of MenuItems.
