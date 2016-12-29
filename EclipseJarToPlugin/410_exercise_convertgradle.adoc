@@ -39,7 +39,7 @@ Go to the *retrofit-osgi* folder and run the *updateSite* task.
 ----
 cd retrofit-osgi
 
-gradle uS
+gradle clean uS
 ----
 
 image::update-site-task-terminal.png[] 
