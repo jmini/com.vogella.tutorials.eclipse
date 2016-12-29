@@ -16,7 +16,7 @@ It assumes that you are already familiar with using the Eclipse IDE.
 include::../web/advertisement/afterTableOfContent.adoc[]
 include::010_eclipsesourcecode.adoc[]
 include::../web/advertisement/inBetween01.adoc[]
-include::030_pluginspy.adoc[]
+include::030_spies.adoc[]
 include::032_addtosearch.adoc[]
 include::../web/advertisement/inBetween02.adoc[]
 include::034_findplugin.adoc[]
