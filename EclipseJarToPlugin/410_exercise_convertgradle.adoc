@@ -1,0 +1,59 @@
+== Exercise - Convert JAR files to OSGi bundles with Gradle
+
+[[convert_osgi_gradle_target]]
+=== Target
+
+In this exercise a p2 update site for the retrofit library, including its' Gson converter, will be created.
+
+Retrofit is a library for making REST calls fairly easy, including the serialization etc.
+
+=== Installing Gradle
+
+For this exercise the Gradle build tool is required.
+
+How to install Gradle can be found here: http://www.vogella.com/tutorials/Gradle/article.html#installing-and-configuring-gradle[Gradle tutorial]
+
+
+=== The build.gradle file
+
+Create a folder called _retrofit-osgi_ on your maschine. In this folder a _build.gradle_ file has to be created.
+
+[source, console]
+----
+mkdir retrofit-osgi
+touch build.gradle
+----
+
+The _build.gradle_ file should have the following contents:
+
+[source, groovy]
+----
+include::res/gradle/build.gradle[]
+----
+
+Go to the *retrofit-osgi* folder and run the *updateSite* task.
+
+[source, console]
+----
+cd retrofit-osgi
+
+gradle uS
+----
+
+image::update-site-task-terminal.png[] 
+
+
+[[convert_osgi_gradle_validate]]
+=== Validate
+
+Try to use the update site in your running Eclipse IDE, but do *not* install it.
+
+image::install-retrofit-osgi.png[]
+
+
+[NOTE]
+====
+The whole solution for this exercise plus a sample RCP application using the retrofit library can be found here: https://github.com/SimonScholz/retrofit-osgi
+====
+
+

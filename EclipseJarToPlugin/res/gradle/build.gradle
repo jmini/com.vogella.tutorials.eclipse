@@ -32,15 +32,15 @@ platform {
 	useFeatureHashQualifiers = false
 	defaultQualifierMap.prefix = ''
 
-	// Convert the retrofit artifact to OSGi, make android.os optional and handle the split package problems in OSGi
+	// Convert the retrofit artifact to OSGi, make android.os optional
 	bundle('com.squareup.retrofit2:retrofit:2.1.0'){
 		bnd {
 			optionalImport 'android.os'
 			optionalImport 'android.net'
-	    	}
+		}
 	}
 
-	// Convert the retrofit gson converter artifact to OSGi and handle the split package problems in OSGi
+	// Convert the retrofit gson converter artifact to OSGi
 	bundle('com.squareup.retrofit2:converter-gson:2.1.0')
 
 	// You can add other converters similar to the gson converter above...
