@@ -1,18 +1,45 @@
 == Convert JAR files to OSGi bundles with Gradle
-	
-You can also use the Gradle build system to convert JARs to OSGi bundles.
-For example, the following build.gradle file converts the EasyMock library and its dependencies to OSGi bundles. 
-Under the hood, it uses the bnd tooling.
-	
-[source,gradle]
+
+The Gradle build system can also be used to convert JARs to OSGi bundles.
+Therefore the usage of the https://github.com/stempler/bnd-platform[bnd-platform
+] Gradle plug-in is necessary.
+
+It can be added to a _build.gradle_ file like this:
+
+[source, groovy]
+----
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.standardout:bnd-platform:1.5.0'
+    }
+}
+
+apply plugin: 'org.standardout.bnd-platform'
+----
+
+This plug-in adds a platform closure, which can be used to configure an update site and the bundles, which should be part of the update site.
+
+A complete example to create a p2 update site for retrofit 2.1.0 with a retrofit Gson converter could look like this:
+
+[source, groovy]
 ----
 include::res/gradle/build.gradle[]
 ----
-	
-Run `gradle bundles` to create OSGi bundles from the specified JAR files.
-Use the `gradle updateSite` task to create a p2 update site.
-	
-For more details see https://github.com/stempler/bnd-platform/blob/master/README.md.
-	
 
-	
+[TIP]
+====
+It is highly recommended to specify a proper path to an existing Eclipse installation by using the _eclipseHome_ in the _platform_ closure, because without it the bnd-platform plug-in will download an Eclipse SDK in order to be able to create a p2 update site.
+====
+
+In order to create bundles/plug-ins from the listed dependencies the *bundles* tasks is supposed to be used.
+If the creation of a p2 update site is desired the *updateSite* or the *updateSiteZip* tasks can be used.
+
+When running a build all dependencies and all its transitive dependencies will be downloaded automatically and can be found in the *plugins* folder.
+
+The whole sample code including a sample RCP application using retrofit can be found here: https://github.com/SimonScholz/retrofit-osgi
+
+For more details and advanced settings (like combining/merging plug-ins with split packages) see https://github.com/stempler/bnd-platform/.
+

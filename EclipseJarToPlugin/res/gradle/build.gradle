@@ -3,19 +3,49 @@ buildscript {
 		mavenCentral()
 	}
 	dependencies {
-		classpath 'org.standardout:bnd-platform:1.2.0'
+		classpath 'org.standardout:bnd-platform:1.5.0'
 	}
 }
 
 apply plugin: 'org.standardout.bnd-platform'
 
 repositories {
-	mavenCentral()
+	jcenter()
 }
 
 platform {
-        // eclipseHome only required for the "updateSite" task
-	eclipseHome = new File('/home/vogella/dev/eclipse46-2016-01-25/eclipse')
-	// list of JARs to convert to OSGi
-	bundle "org.powermock:powermock-easymock-release-full:1.6.1"
+
+	// Add proper path to your eclipse installation (necessary for building a p2 updatesite)
+	eclipseHome = new File('/home/simon/eclipse/eclipse-baseline')
+
+	// configure proper names for the p2 update site
+	categoryId = 'retrofit'
+	categoryName = 'retrofit'
+
+	featureId = 'retrofit'
+	featureName = 'retrofit osgi'
+	featureVersion = '2.1.0'
+	featureProvider = 'Simon Scholz'
+
+	defaultQualifier = ''
+	useBndHashQualifiers = false
+	useFeatureHashQualifiers = false
+	defaultQualifierMap.prefix = ''
+
+	// Convert the retrofit artifact to OSGi, make android.os optional and handle the split package problems in OSGi
+	bundle('com.squareup.retrofit2:retrofit:2.1.0'){
+		bnd {
+			optionalImport 'android.os'
+			optionalImport 'android.net'
+	    	}
+	}
+
+	// Convert the retrofit gson converter artifact to OSGi and handle the split package problems in OSGi
+	bundle('com.squareup.retrofit2:converter-gson:2.1.0')
+
+	// You can add other converters similar to the gson converter above...
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '3.2.1'
 }
