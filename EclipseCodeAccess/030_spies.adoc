@@ -77,3 +77,6 @@ After this the keybinding are activated.
 |kbd:[Ctrl+Shift+I]
 |Start GtkInspector
 |===
+
+
+See https://developer.gnome.org/gtk3/stable/chap-css-overview.html[CSS for GTK] for more information.
