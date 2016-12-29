@@ -1,4 +1,4 @@
 == Links and Literature
-	
-Nothing listed.
+
+Retrofit Gradle Conversion Example - https://github.com/SimonScholz/retrofit-osgi
 
