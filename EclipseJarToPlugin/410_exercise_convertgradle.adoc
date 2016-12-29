@@ -24,6 +24,8 @@ mkdir retrofit-osgi
 touch build.gradle
 ----
 
+Alternatively a new general project in the Eclipse workspace called _retrofit-osgi_ could be created, which contains a _build.gradle_ file.
+
 The _build.gradle_ file should have the following contents:
 
 [source, groovy]
