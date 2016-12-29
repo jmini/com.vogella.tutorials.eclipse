@@ -46,6 +46,3 @@ platform {
 	// You can add other converters similar to the gson converter above...
 }
 
-task wrapper(type: Wrapper) {
-	gradleVersion = '3.2.1'
-}
