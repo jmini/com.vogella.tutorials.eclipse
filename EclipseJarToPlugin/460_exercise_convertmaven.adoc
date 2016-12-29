@@ -1,0 +1,45 @@
+== Exercise - Convert JAR files to OSGi bundles with the p2-maven-plugin
+
+[[convert_osgi_p2_maven_target]]
+=== Target
+
+In this exercise a p2 update site for the RxJava 2.0 library will be created.
+
+RxJava is a library for reactive programming in Java. See http://www.vogella.com/tutorials/RxJava/article.html[RxJava tutorial] for more information on RxJava.
+
+=== Creating a p2 maven project
+
+Create a folder called _p2-maven_ on your maschine. In this folder a _pom.xml_ file has to be created.
+
+[source, console]
+----
+mkdir p2-maven
+touch pom.xml
+----
+
+Alternatively a new general project in the Eclipse workspace called _p2-maven_ could be created, which contains a _pom.xml_ file.
+
+The _pom.xml_ file should have the following contents:
+
+[source, xml]
+----
+include::res/p2-maven-plugin/pom-rxjava.xml[]
+----
+
+Go to the *p2-maven* folder and run the *p2:site* goal.
+
+[source, console]
+----
+cd p2-maven
+
+maven clean p2:site
+----
+
+[[convert_osgi_p2_maven_validate]]
+=== Validate
+
+Try to use the update site in your running Eclipse IDE, but do *not* install it.
+
+image::p2-maven-plugin-rxjava.png[]
+
+
