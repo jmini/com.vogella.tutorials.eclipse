@@ -6,3 +6,5 @@ http://www.eclipse.org/articles/Article-Table-viewer/table_viewer.html[Building 
 			
 http://wiki.eclipse.org/index.php/JFaceSnippets[JFace snippets, e.g., small code examples]
 
+http://www.eclipse.org/articles/article.php?file=Article-CustomDrawingTableAndTreeItems/index.html[Custom Drawing Table and Tree Items]
+
