@@ -62,7 +62,7 @@ Use the `com.example.e4.rcp.todo.handler` prefix for all IDs of the handlers.
 |===
 |Handler ID |Command |Class
 
-|saveall
+|.saveall
 |Save
 |SaveAllHandler
 
@@ -141,6 +141,6 @@ Also check that you can exit the application via the _Exit_ menu entry.
 
 === Possible issue: Exit menu entry on a MacOS
 
-If you use the "org.eclipse.ui.file.exit" ID for your exit command, the Eclipse framework tries to map the exit command to its default menu location on the MacOS.
+If you use the `org.eclipse.ui.file.exit"` ID for your exit command, the Eclipse framework maps the menu entry to its default menu location on the MacOS.
 If you don't see your exit menu, in its defined position, check this location.
 

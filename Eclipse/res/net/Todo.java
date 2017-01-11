@@ -10,14 +10,12 @@ public class Todo {
   private boolean done = false;
   private Date dueDate = new Date();
 
-  public Todo(long id, String summary, String description, boolean done,
-      Date dueDate) {
+  public Todo(long id, String summary, String description, boolean done, Date dueDate) {
     this.id = id;
     this.summary = summary;
     this.description = description;
     this.done = done;
-    this.dueDate = dueDate;
-
+    setDueDate(dueDate);
   }
 
   public long getId() {
