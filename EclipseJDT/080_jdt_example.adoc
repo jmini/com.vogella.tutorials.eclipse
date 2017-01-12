@@ -3,7 +3,8 @@
 The following example create a command which will read the project of the workspace, get all package and Java source files for these projects and read all methods for them by using the JDT Java Model API.
 
 Create a plug-in project called `com.vogella.jdt.infos`.
-Choose the "Plug-in with an Eclipse 4 handler" as a template.
+// TODO(fap): this naming will change with Oxygen (4.7)
+Choose "Plug-in with an Eclipse 4 handler" as a template.
 
 Add the following dependencies to your plug-in:
 

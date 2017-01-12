@@ -4,7 +4,7 @@ The Eclipse _Java Development Tools_ (JDT) project provides the tools to develop
 This project also provides APIs to access and manipulate Java source code.
 
 JDT provides access to the Java source code via two different means.
-The _Java Model_ and the _Abstract Syntax Tree (AST)_ which is a works on a _Document Object Model_ similar to the XML DOM.
+The _Java Model_ and the _Abstract Syntax Tree (AST)_, which works on a _Document Object Model_ similar to the XML DOM.
 
 === Java Model
 
@@ -33,7 +33,7 @@ The Java model is represented as a tree structure which can be described via the
 
 | Each package
 | IPackageFragment
-| Each package is below the IPackageFragmentRoot, sub-packages are not leaves of the package, they are listed directed under IPackageFragmentRoot
+| Each package is below the IPackageFragmentRoot, sub-packages are not leaves of the package, they are listed directly under IPackageFragmentRoot
 
 | Java Source File
 | ICompilationUnit
@@ -48,11 +48,11 @@ The Java model is represented as a tree structure which can be described via the
 === Abstract Syntax Tree (AST)
 
 The AST is a detailed tree representation of the Java source code.
-The AST defines API to modify, create, read and delete source code.
+The AST defines an API to modify, create, read and delete source code.
 
 The main package for the AST is the `org.eclipse.jdt.core.dom` package and is located in the `org.eclipse.jdt.core` plug-in.
 
-Each Java source file is represented as a subclass of the `ASTNode` class.
+Each Java source element is represented as a subclass of the `ASTNode` class.
 Each specific AST node provides specific information about the object it represents.
 For example you have `MethodDeclaration` (for methods), `VariableDeclarationFragment` (for variable declarations) and `SimpleName` (for any string which is not a Java keyword).
 
