@@ -29,29 +29,26 @@ public class ModifyClasspathHandler {
 
 			// Get the selected IJavaProject
 			final IJavaElement javaElement = (IJavaElement) firstElement;
+			Job job = Job.create("Setting the classpath", monitor -> {
+				IJavaProject javaProject = javaElement.getJavaProject();
 
-			Job job = new Job("Setting the classpath") {
+				// Test the best and get the IClasspathEntry for
+				// mockito-core
+				Path path = new Path(
+						"/home/simon/.m2/repository/org/mockito/mockito-core/1.8.4/mockito-core-1.8.4.jar");
+				IClasspathEntry libraryEntry = JavaCore.newLibraryEntry(path, null, null);
 
-				@Override
-				protected IStatus run(IProgressMonitor monitor) {
-					IJavaProject javaProject = javaElement.getJavaProject();
-
-					// Test the best and get the IClasspathEntry for mockito-core
-					Path path = new Path(
-							"/home/simon/.m2/repository/org/mockito/mockito-core/1.8.4/mockito-core-1.8.4.jar");
-					IClasspathEntry libraryEntry = JavaCore.newLibraryEntry(path, null, null);
-
-					try {
-						// add the classpath to mockito-core for the java project
-						javaProject.setRawClasspath(new IClasspathEntry[] { libraryEntry }, monitor);
-					} catch (JavaModelException e) {
-						Bundle bundle = FrameworkUtil.getBundle(getClass());
-						return new Status(Status.ERROR, bundle.getSymbolicName(),
-								"Could not set classpath to Java project: " + javaProject.getElementName(), e);
-					}
-					return Status.OK_STATUS;
+				try {
+					// add the classpath to mockito-core for the java
+					// project
+					javaProject.setRawClasspath(new IClasspathEntry[] { libraryEntry }, monitor);
+				} catch (JavaModelException e) {
+					Bundle bundle = FrameworkUtil.getBundle(getClass());
+					return new Status(Status.ERROR, bundle.getSymbolicName(),
+							"Could not set classpath to Java project: " + javaProject.getElementName(), e);
 				}
-			};
+				return Status.OK_STATUS;
+			});
 
 			job.schedule();
 		}

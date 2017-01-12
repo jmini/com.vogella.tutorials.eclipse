@@ -21,10 +21,10 @@ For example, you have templates for statements within a method or templates for 
 | Allows to define templates for members, e.g., new methods
 |===
 
-To provide a code templates based on this extension point, create a new plug-in called `com.vogella.jdt.templates`.
+To provide a code template based on this extension point, create a new plug-in called `com.vogella.jdt.templates`.
 	
 	
-Add an extension for the `org.eclipse.ui.editors.templates` extension point and add an `include`as in the following screenshot.
+Add an extension for the `org.eclipse.ui.editors.templates` extension point and add an `include` as in the following screenshot.
 	
 image::/jdttemplates10.png[]
 	
@@ -32,6 +32,7 @@ image::/jdttemplates10.png[]
 In the reference file you can add your templates following a predefined schema. 
 The file can look like the following, the structure should be easily to adjust for other use cases.
 
-[source, language]
+[source, xml]
 ----
 include::res/templates/additional-templates.xml[]
+----
